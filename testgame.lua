@@ -14,7 +14,7 @@ function game.load()
 end
 
 function game.loop(dt)
-
+    sing.x,sing.y = sing.body:getPosition()
 end
 
 function game.draw()
