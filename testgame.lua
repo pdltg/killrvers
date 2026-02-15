@@ -2,7 +2,7 @@ local game = {}
 
 local sing = {
     x = 50,
-    y = 50,
+    y = 100,
     w = 1000,
     h = 20
 }
