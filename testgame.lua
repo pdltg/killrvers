@@ -1,8 +1,8 @@
 local game = {}
 
 local sing = {
-    x = 500,
-    y = 500,
+    x = 50,
+    y = 50,
     w = 1000,
     h = 20
 }
