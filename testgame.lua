@@ -22,7 +22,7 @@ function game.loop(dt)
 end
 
 function game.draw()
-    love.graphics.rectangle("fill", sing.x, sing.y, sing.w, sing.h)
+    love.graphics.rectangle("fill", sing.x - sing.w/2, sing.y - sing.h/2, sing.w, sing.h)
 end
 
 function game.drawui()
