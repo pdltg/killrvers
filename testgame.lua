@@ -21,4 +21,8 @@ function game.draw()
     love.graphics.rectangle("fill", sing.x, sing.y, sing.w, sing.h)
 end
 
+function game.drawui()
+    love.graphics.rectangle("line", 100, 1, 10, 10)
+end
+
 return game
