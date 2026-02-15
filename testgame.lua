@@ -8,7 +8,7 @@ local sing = {
 }
 
 function game.load()
-    sing.body = love.physics.newBody(world, sing.x, sing.y, "static")
+    sing.body = love.physics.newBody(wold, sing.x, sing.y, "static")
     sing.shape = love.physics.newRectangleShape(sing.w, sing.h)
     sing.fixture = love.physics.newFixture(sing.body, sing.shape)
 end
