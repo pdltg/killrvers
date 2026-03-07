@@ -1,4 +1,4 @@
-local game = {}
+local game = {done = false}
 
 local sing = {
     x = 50,
@@ -28,5 +28,7 @@ end
 function game.drawui()
     love.graphics.rectangle("line", 100, 1, 10, 10)
 end
+
+game.done = true
 
 return game
