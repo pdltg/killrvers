@@ -1,4 +1,6 @@
-local game = {done = false}
+local game = {done = false,name = "Example Game",id = 0}
+
+-- game code
 
 local sing = {
     x = 50,
