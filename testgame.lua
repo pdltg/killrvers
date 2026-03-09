@@ -2,6 +2,8 @@ local game = {done = false,name = "Example Game",id = 0}
 
 -- game code
 
+hello()
+
 local sing = {
     x = 50,
     y = 100,
