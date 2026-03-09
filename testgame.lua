@@ -28,6 +28,7 @@ function game.load()
     kill.fixture = love.physics.newFixture(kill.body, kill.shape)
     -- do something with this curently it damages the player when they spawn
     HurtPlayer(10)
+    love.graphics.setBackgroundColor(0,1,1)
 end
 
 function game.loop(dt)
