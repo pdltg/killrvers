@@ -6,7 +6,8 @@ local sing = {
     x = 50,
     y = 100,
     w = 1000,
-    h = 20
+    h = 20,
+    coll = HC.rectangle(sing.x,sing.y,sing.w,sing.h)
 }
 
 function game.load()
