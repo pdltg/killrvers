@@ -38,7 +38,10 @@ function game.loop(dt)
     sing.x,sing.y = sing.body:getPosition()
     kill.x,kill.y = kill.body:getPosition()
     if checkCollision(plrrlp.x,plrrlp.y,plrrlp.w,plrrlp.h,kill.x,kill.y,kill.w,kill.h) then
-        HurtPlayer(10)
+        if timer > 200 then
+            HurtPlayer(10)
+            timer = 0
+        end
     end
 end
 
