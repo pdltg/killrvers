@@ -6,13 +6,15 @@ local sing = {
     x = 50,
     y = 100,
     w = 1000,
-    h = 20
+    h = 20,
+    coll = HC.rectangle(50,100,1000,20)
 }
 local kill = {
-    x = 50,
-    y = 100,
-    w = 1000,
-    h = 20
+    x = 100,
+    y = 90,
+    w = 100,
+    h = 20,
+    coll = HC.rectangle(100,90,100,20)
 }
 
 function game.load()
@@ -29,6 +31,8 @@ function game.load()
     -- do something with this curently it damages the player when they spawn
     HurtPlayer(10)
     love.graphics.setBackgroundColor(0,1,1)
+    -- starts the player with 20 hp
+    plrrlp.hp = 20
 end
 
 function game.loop(dt)
@@ -40,7 +44,7 @@ function game.draw()
     love.graphics.setColor(1,1,1)
     love.graphics.rectangle("fill", sing.x - sing.w/2, sing.y - sing.h/2, sing.w, sing.h)
     love.graphics.setColor(1,0,0)
-    love.graphics.rectangle("fill", 70, 90, kill.w, kill.h)
+    love.graphics.rectangle("fill", kill.x, kill.y, kill.w, kill.h)
 end
 
 function game.drawui()
