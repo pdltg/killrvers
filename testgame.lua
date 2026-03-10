@@ -29,7 +29,6 @@ function game.load()
     kill.shape = love.physics.newRectangleShape(kill.w, kill.h)
     kill.fixture = love.physics.newFixture(kill.body, kill.shape)
     -- do something with this curently it damages the player when they spawn
-    HurtPlayer(10)
     love.graphics.setBackgroundColor(0,1,1)
     -- starts the player with 20 hp
     plrrlp.hp = 50
@@ -38,6 +37,9 @@ end
 function game.loop(dt)
     sing.x,sing.y = sing.body:getPosition()
     kill.x,kill.y = kill.body:getPosition()
+    if checkCollision(plrrlp.x,plrrlp.y,plrrlp.w,plrrlp.h,kill.x,kill.y,kill.w,kill.h) then
+        HurtPlayer(10)
+    end
 end
 
 function game.draw()
