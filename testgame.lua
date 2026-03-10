@@ -44,7 +44,7 @@ function game.draw()
     love.graphics.setColor(1,1,1)
     love.graphics.rectangle("fill", sing.x - sing.w/2, sing.y - sing.h/2, sing.w, sing.h)
     love.graphics.setColor(1,0,0)
-    love.graphics.rectangle("fill", kill.x - kill.w/2, kill.y - kill.h/2, kill.w, kill.h)
+    love.graphics.rectangle("fill",100,90,100,20)
 end
 
 function game.drawui()
