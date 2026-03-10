@@ -32,7 +32,7 @@ function game.load()
     HurtPlayer(10)
     love.graphics.setBackgroundColor(0,1,1)
     -- starts the player with 20 hp
-    plrrlp.hp = 20
+    plrrlp.hp = 50
 end
 
 function game.loop(dt)
