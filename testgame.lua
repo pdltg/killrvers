@@ -30,8 +30,6 @@ function game.load()
     kill.fixture = love.physics.newFixture(kill.body, kill.shape)
     -- do something with this curently it damages the player when they spawn
     love.graphics.setBackgroundColor(0,1,1)
-    -- starts the player with 20 hp
-    plrrlp.hp = 50
 end
 
 function game.loop(dt)
