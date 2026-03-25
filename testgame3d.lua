@@ -1,4 +1,4 @@
-local game = {}
+local game = {done = false,name = "Example Game",id = 0}
 
 function game.load()
   print("filler")
