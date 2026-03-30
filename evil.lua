@@ -49,5 +49,9 @@ function game.draw()
   
 end
 
+function game.drawui()
+
+end
+
 game.done = true
 return game
