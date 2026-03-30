@@ -23,10 +23,9 @@ local function base64_decode(data)
     end))
 end
 
-
 local function loadEmbeddedImage()
     local bytes = base64_decode(base64Image)
-    local fileData = love.filesystem.newFileData(bytes, "embedded.png")
+    local fileData = love.filesystem.newFileData(bytes, "embedded.jpg") -- JPG here
     local imageData = love.image.newImageData(fileData)
     return love.graphics.newImage(imageData)
 end
