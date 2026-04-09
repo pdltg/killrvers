@@ -28,8 +28,6 @@ function game.load()
     kill.body = love.physics.newBody(world, kill.x, kill.y, "static")
     kill.shape = love.physics.newRectangleShape(kill.w, kill.h)
     kill.fixture = love.physics.newFixture(kill.body, kill.shape)
-    -- do something with this curently it damages the player when they spawn
-    love.graphics.setBackgroundColor(0,1,1)
 end
 
 function game.loop(dt)
