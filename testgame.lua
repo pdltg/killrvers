@@ -6,15 +6,13 @@ local sing = {
     x = 50,
     y = 100,
     w = 1000,
-    h = 20,
-    coll = HC.rectangle(50,100,1000,20)
+    h = 20
 }
 local kill = {
     x = 100,
     y = 90,
     w = 100,
-    h = 20,
-    coll = HC.rectangle(100,90,100,20)
+    h = 20
 }
 
 function game.load()
@@ -28,6 +26,7 @@ function game.load()
     kill.body = love.physics.newBody(world, kill.x, kill.y, "static")
     kill.shape = love.physics.newRectangleShape(kill.w, kill.h)
     kill.fixture = love.physics.newFixture(kill.body, kill.shape)
+    love.graphics.setBackgroundColor(0, 0.5, 0.5)
 end
 
 function game.loop(dt)
