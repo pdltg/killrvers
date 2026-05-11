@@ -56,7 +56,7 @@ function love.textinput(t)
 end
 
 function newspell()
-    game.num = love.math.random(1, 15)
+    game.num = love.math.floor(love.math.random(1, 15))
     timer = 0
     love.audio.play(loadAudio(game.words[game.num].b64, "mp3"))
 end
