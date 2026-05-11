@@ -24,19 +24,26 @@ function game.load()
 end
 
 function game.loop(dt)
+
+    timer = timer + dt
+
     plrrlp.x = 0
     plrrlp.y = 0
-    if not answer then
-        game.input = ""
+
+    if not game.answer then
         newspell()
-        answer = true
+        game.answer = true
     end
-    if answer then
-        if timer > 1000 then
-            if not game.words[game.num].word == game.input then
+
+    if game.answer then
+
+        if timer > 10 then
+
+            if game.words[game.num].word ~= game.input then
                 game.wrong = game.wrong + 1
-                answer = false
             end
+
+            game.answer = false
         end
     end
 end
@@ -48,7 +55,12 @@ end
 
 function game.drawui()
     love.graphics.setColor(1,0,0)
-    love.graphics.print("Wrong: " .. game.wrong, winw/2, winh/2 + 100)
+
+    love.graphics.print(
+        "Wrong: " .. game.wrong,
+        winw/2,
+        winh/2 + 100
+    )
 end
 
 function love.textinput(t)
@@ -56,10 +68,21 @@ function love.textinput(t)
 end
 
 function newspell()
-    game.num = love.math.floor(love.math.random(1, 15))
+
+    game.num = love.math.random(1, 15)
+
+    game.input = ""
+
     timer = 0
-    love.audio.play(loadAudio(game.words[game.num].b64, "mp3"))
+
+    love.audio.play(
+        loadAudio(
+            game.words[game.num].b64,
+            "mp3"
+        )
+    )
 end
 
 game.done = true
+
 return game
