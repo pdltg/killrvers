@@ -50,7 +50,7 @@ end
 
 function game.draw()
     love.graphics.setColor(0, 0.65, 0)
-    love.graphics.rectangle("fill", 0, -150, 300, 50)
+    love.graphics.rectangle("fill", 0, 150, 5000, 50)
 end
 
 function game.drawui()
@@ -59,13 +59,13 @@ function game.drawui()
     love.graphics.print(
         "Wrong: " .. game.wrong,
         winw/2 + 1 * pubscale,
-        winh/2 + 100 * pubscale,
+        winh/2 + 500 * pubscale,
         0,
         pubscale,
         pubscale
     )
     love.graphics.setColor(0,0,0)
-    love.graphics.print(game.input, 0, 100 * pubscale, 0, pubscale, pubscale)
+    love.graphics.print(game.input, 0, 500 * pubscale, 0, pubscale, pubscale)
 end
 
 function love.textinput(t)
