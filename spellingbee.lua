@@ -27,8 +27,8 @@ function game.loop(dt)
 
     timer = timer + dt
 
-    plrrlp.x = 0
-    plrrlp.y = 0
+    plrrlp.body:setX = 0
+    plrrlp.body:setY = 0
 
     if not game.answer then
         newspell()
@@ -37,7 +37,7 @@ function game.loop(dt)
 
     if game.answer then
 
-        if timer > 1000 then
+        if timer > 700 then
 
             if game.words[game.num].word ~= game.input then
                 game.wrong = game.wrong + 1
@@ -58,11 +58,14 @@ function game.drawui()
 
     love.graphics.print(
         "Wrong: " .. game.wrong,
-        winw/2,
-        winh/2 + 100
+        winw/2 + 1 * pubscale,
+        winh/2 + 100 * pubscale,
+        0,
+        pubscale,
+        pubscale
     )
     love.graphics.setColor(0,0,0)
-    love.graphics.print(game.input, 0, 100)
+    love.graphics.print(game.input, 0, 100 * pubscale, 0, pubscale, pubscale)
 end
 
 function love.textinput(t)
