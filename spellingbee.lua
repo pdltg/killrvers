@@ -37,7 +37,7 @@ function game.loop(dt)
 
     if game.answer then
 
-        if timer > 10 then
+        if timer > 1000 then
 
             if game.words[game.num].word ~= game.input then
                 game.wrong = game.wrong + 1
