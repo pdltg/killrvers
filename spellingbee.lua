@@ -27,8 +27,8 @@ function game.loop(dt)
 
     timer = timer + dt
 
-    plrrlp.body:setX = 0
-    plrrlp.body:setY = 0
+    plrrlp.body:setX(0)
+    plrrlp.body:setY(0)
 
     if not game.answer then
         newspell()
