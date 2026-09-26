@@ -63,3 +63,5 @@ function draw()
     love.graphics.print("Space = Jump", 20, 65)
 end
 ]]
+
+return game
