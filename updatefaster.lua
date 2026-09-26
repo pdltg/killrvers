@@ -6,8 +6,8 @@ local gravity = 900
 local jumpPower = 420
 
 function init()
-    createNewObject(0, 550, 900, 50, "anchored")
-    createNewObject(300, 450, 100, 100, "unanchored")
+    hello = createNewObject(0, 550, 900, 50, "anchored")
+    cat = createNewObject(300, 450, 100, 100, "unanchored")
 end
 
 function input(player, input)
@@ -61,6 +61,8 @@ function draw()
     love.graphics.setColor(1, 1, 1)
     love.graphics.print("WASD / Arrow Keys = Move", 20, 45)
     love.graphics.print("Space = Jump", 20, 65)
+    love.graphics.rectangle("fill", hello.x, hello.y, hello.w, hello.h)
+    love.graphics.rectangle("fill", cat.x, cat.y, cat.w, cat.h)
 end
 ]]
 
