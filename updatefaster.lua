@@ -48,13 +48,14 @@ end
 ]]
 
 game.client = [[
-function init()
+cli = {}
+function cli.init()
 end
 
-function update(dt)
+function cli.update(dt)
 end
 
-function draw()
+function cli.draw()
     love.graphics.setColor(0.2, 0.8, 0.3)
     love.graphics.print("MULTIPLAYER TEST", 20, 20)
 
@@ -64,6 +65,7 @@ function draw()
     love.graphics.rectangle("fill", hello.x, hello.y, hello.w, hello.h)
     love.graphics.rectangle("fill", cat.x, cat.y, cat.w, cat.h)
 end
+return cli
 ]]
 
 return game
