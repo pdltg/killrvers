@@ -65,6 +65,9 @@ function cli.draw()
     love.graphics.rectangle("fill", hello.x, hello.y, hello.w, hello.h)
     love.graphics.rectangle("fill", cat.x, cat.y, cat.w, cat.h)
 end
+
+function cli.drawui()
+end
 return cli
 ]]
 
