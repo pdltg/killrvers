@@ -3,8 +3,8 @@ game = {}
 game.physics = [[
 physics = {}
 function physics.init()
-    hello = createNewObject(0, 550, 900, 50, "anchored")
-    cat = createNewObject(300, 450, 100, 100, "unanchored")
+    hello = createNewObject(0, 100, 900, 50, "anchored")
+    cat = createNewObject(300, 0, 100, 100, "unanchored")
 end
 return physics
 ]]
